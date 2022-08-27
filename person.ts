@@ -4,14 +4,14 @@ export class Person {
   middleName: string;
   age: number;
   year: any = new Date().getFullYear();
-  emails: string[] = [];
+  emails: Array<string> = [];
 
   constructor(
     firstname: string,
     middleName: string,
     lastName: string,
     age: number,
-    emails: string[] = []
+    emails: Array<string> = []
   ) {
     this.firstname = firstname;
     this.middleName = middleName;
@@ -20,8 +20,8 @@ export class Person {
     this.emails = emails;
   }
 
-  getFullName(first: string, middle: string, last: string) {
-    return first + ' ' + middle + ' ' + last;
+  getFullName() {
+    return this.firstname + ' ' + this.middleName + ' ' + this.lastName;
   }
 
   getBirthYear() {
